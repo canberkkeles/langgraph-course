@@ -1,0 +1,15 @@
+[project]
+name = "reflection-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "black>=25.11.0",
+    "grandalf>=0.8",
+    "isort>=6.1.0",
+    "langchain>=0.3.27",
+    "langchain-aws>=0.2.35",
+    "langgraph>=0.6.11",
+    "python-dotenv>=1.2.1",
+]
