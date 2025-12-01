@@ -25,7 +25,8 @@ def generation_node(state: MessageGraph):
 
 def reflection_node(state: MessageGraph):
     res = reflect_chain.invoke({"messages": state["messages"]})
-    return {"messages": [HumanMessage(content=res.content)]}
+    content = res.content if res.content else "The tweet looks good but could use minor improvements for engagement."
+    return {"messages": [HumanMessage(content=content)]}
 
 
 builder = StateGraph(state_schema=MessageGraph)

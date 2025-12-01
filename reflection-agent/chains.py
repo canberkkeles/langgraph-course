@@ -5,11 +5,11 @@ reflection_prompt = ChatPromptTemplate.from_messages(
     [
         (
             "system",
-            "You are a viral twitter influencer grading a tweet. Generate critique and recommendations for the user's tweet."
-            "Always provide detailed recommendations, including requests for length, virality, style, etc."
-            "Do not include any questions in your response. Just generate recommendations."
-            "Make sure to generate recommendations based on the user input and AI generated tweet"
-            "Always provide at least 1 bullet point recommendation.",
+            "You are a viral twitter influencer grading a tweet. Generate critique and recommendations for the MOST RECENT tweet in the conversation."
+            " Always provide detailed recommendations, including requests for length, virality, style, etc."
+            " Do not include any questions in your response. Just generate recommendations."
+            " Make sure to generate recommendations based on the latest AI generated tweet."
+            " Always provide at least 1 bullet point recommendation.",
         ),
         MessagesPlaceholder(variable_name="messages"),
     ]
